@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Kakade | Certifications</title>
+    <meta name="description" content="Verified academic certifications, coding credentials, and hackathon achievements of Kiran Kakade.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Premium Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Specific Page Hero Style */
+        .cert-hero {
+            padding-top: 10rem;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .cert-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .cert-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Kiran <span>Kakade</span></a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#skills">My Skills</a></li>
+                <li><a href="index.html#projects">Featured Projects</a></li>
+                <li><a href="certificates.html" class="active">Certifications</a></li>
+                <li><a href="index.html#experience">Education & Experience</a></li>
+                <li><a href="index.html#contact">Get in Touch</a></li>
+            </ul>
+
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="cert-hero">
+        <div class="container">
+            <h1>My Certifications</h1>
+            <p class="section-subtitle">Verified achievements, academic credentials, and hackathon milestones</p>
+        </div>
+    </header>
+
+    <!-- Certifications Gallery Section -->
+    <main class="certificates" style="padding-top: 1rem;">
+        <div class="container">
+            
+            <!-- Category Filter Tabs -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Certificates</button>
+                <button class="filter-btn" data-filter="dev">Development</button>
+                <button class="filter-btn" data-filter="ai-hackathon">AI & Hackathons</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="certificates-grid">
+                <!-- Certificate 1: InternPe -->
+                <div class="certificate-card" data-category="dev">
+                    <div class="certificate-image">
+                        <img src="internpe-completion-certificate.jpg" alt="Certificate of completion for Web Development Internship from InternPe">
+                        <div class="cert-overlay">
+                            <button class="overlay-btn view-cert-trigger" data-img="internpe-completion-certificate.jpg" aria-label="View Certificate"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Web Development Internship</h3>
+                        <p class="issuer">InternPe</p>
+                        <p class="date">March 2025</p>
+                        <a href="internpe-completion-certificate.jpg" download="InternPe_Web_Development_Certificate.jpg"
+                            class="cert-link">Download Certificate <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2: Versanix Tech -->
+                <div class="certificate-card" data-category="dev">
+                    <div class="certificate-image">
+                        <img src="versanix-tech-certificate.jpeg" alt="Certificate of participation in Versanix Tech training or seminar issued by Versanix Technologies">
+                        <div class="cert-overlay">
+                            <button class="overlay-btn view-cert-trigger" data-img="versanix-tech-certificate.jpeg" aria-label="View Certificate"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Versanix Tech</h3>
+                        <p class="issuer">Versanix Technologies</p>
+                        <p class="date">March 2026</p>
+                        <a href="versanix-tech-certificate.jpeg" download="Versanix_Tech_Certificate.jpeg"
+                            class="cert-link">Download Certificate <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3: AI Symposium Hackathon -->
+                <div class="certificate-card" data-category="ai-hackathon">
+                    <div class="certificate-image">
+                        <img src="vit-hackathon-certificate.jpeg" alt="Certificate from the AI Symposium Hackathon event hosted at VIT Pune">
+                        <div class="cert-overlay">
+                            <button class="overlay-btn view-cert-trigger" data-img="vit-hackathon-certificate.jpeg" aria-label="View Certificate"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>AI Symposium Hackathon</h3>
+                        <p class="issuer">VIT Pune</p>
+                        <p class="date">March 2026</p>
+                        <a href="vit-hackathon-certificate.jpeg" download="AI_Symposium_Hackathon_Certificate.jpeg"
+                            class="cert-link">Download Certificate <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 4: IEEE Hackathon -->
+                <div class="certificate-card" data-category="ai-hackathon">
+                    <div class="certificate-image">
+                        <img src="ieee-hackathon-certificate.jpg" alt="IEEE Hackathon certificate of participation from MMCOE Pune">
+                        <div class="cert-overlay">
+                            <button class="overlay-btn view-cert-trigger" data-img="ieee-hackathon-certificate.jpg" aria-label="View Certificate"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>IEEE Hackathon</h3>
+                        <p class="issuer">Technical Event</p>
+                        <p class="date">October 2025</p>
+                        <a href="ieee-hackathon-certificate.jpg" download="IEEE_Hackathon_Certificate.jpg" class="cert-link">Download Certificate <i
+                                class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 5: Data Visualization Python -->
+                <div class="certificate-card" data-category="data-science">
+                    <div class="certificate-image">
+                        <img src="data-visualization-python-certificate.png" alt="Data Visualization using Python course completion certificate">
+                        <div class="cert-overlay">
+                            <button class="overlay-btn view-cert-trigger" data-img="data-visualization-python-certificate.png" aria-label="View Certificate"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Data Visualization Using Python</h3>
+                        <p class="issuer">Python Specialization</p>
+                        <p class="date">August 2025</p>
+                        <a href="data-visualization-python-certificate.png"
+                            download="Data_Visualization_Using_Python_Certificate.png" class="cert-link">Download Certificate <i
+                                class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 6: Brainwave Market Minds -->
+                <div class="certificate-card" data-category="ai-hackathon">
+                    <div class="certificate-image">
+                        <img src="vidya-pratishthan-market-minds-certificate.jpeg" alt="Brainwave 2026 Market Minds competition certificate issued by VIT Baramati">
+                        <div class="cert-overlay">
+                            <button class="overlay-btn view-cert-trigger" data-img="vidya-pratishthan-market-minds-certificate.jpeg" aria-label="View Certificate"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Brainwave 2026</h3>
+                        <p class="issuer">VIT, Baramati</p>
+                        <p class="date">March 2026</p>
+                        <a href="vidya-pratishthan-market-minds-certificate.jpeg" download="Brainwave_2026_Certificate.jpeg"
+                            class="cert-link">Download Certificate <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+            <img src="" alt="Certificate Large Preview" class="lightbox-img" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year"></span> Kiran Kakade. All rights reserved.</p>
+                <div class="footer-icons">
+                    <a href="https://github.com/kakadekiran7875" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kiran-kakade-1a30ab2aa" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/kakade_kiran_2211_/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <a href="#" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+
+        // Dynamic Copyright Year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+        // Navbar & Scroll to Top Visibility
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            const scrollToTop = document.querySelector('.scroll-to-top');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+
+        // Category Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const certCards = document.querySelectorAll('.certificate-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Set active button style
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                certCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Lightbox Modal Logic
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const viewCertTriggers = document.querySelectorAll('.view-cert-trigger');
+
+        viewCertTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const imgSrc = trigger.getAttribute('data-img');
+                lightboxImg.src = imgSrc;
+                lightboxModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Stop scrolling behind modal
+            });
+        });
+
+        // Click image inside certificate image wrapper as well to trigger lightbox
+        document.querySelectorAll('.certificate-image img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => {
+                const imgSrc = img.getAttribute('src');
+                lightboxImg.src = imgSrc;
+                lightboxModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox modal
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal || e.target.classList.contains('lightbox-content')) {
+                closeLightbox();
+            }
+        });
+        
+        // Escape key to close modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>

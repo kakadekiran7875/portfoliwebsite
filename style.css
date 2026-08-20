@@ -3,24 +3,43 @@
 
 /* CSS Variables */
 :root {
-    --background-color: #0c0f16;
-    --background-secondary: #080a0f;
-    --card-color: #1a1f2e;
-    --card-hover: #22293d;
-    --primary-color: #8b5cf6;
-    --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    /* HSL base tones */
+    --primary-hsl: 250, 84%, 66%;
+    --primary-gradient-hsl-end: 238, 83%, 66%;
+    
+    --bg-hsl: 222, 30%, 7%;
+    --bg-sec-hsl: 222, 31%, 5%;
+    --card-hsl: 223, 28%, 15%;
+    --card-hover-hsl: 223, 28%, 19%;
+    --text-hsl: 210, 100%, 98%;
+    --text-sec-hsl: 215, 25%, 72%;
+    --text-muted-hsl: 217, 18%, 47%;
+    
+    --background-color: HSL(var(--bg-hsl));
+    --background-secondary: HSL(var(--bg-sec-hsl));
+    --card-color: HSL(var(--card-hsl));
+    --card-hover: HSL(var(--card-hover-hsl));
+    --primary-color: HSL(var(--primary-hsl));
+    --primary-gradient: linear-gradient(135deg, HSL(var(--primary-hsl)) 0%, HSL(var(--primary-gradient-hsl-end)) 100%);
     --accent-gradient: linear-gradient(135deg, #e5e7eb 0%, #9ca3af 100%);
     --blue-gradient: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
     --green-gradient: linear-gradient(135deg, #2dd4bf 0%, #10b981 100%);
-    --text-color: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
+    --text-color: HSL(var(--text-hsl));
+    --text-secondary: HSL(var(--text-sec-hsl));
+    --text-muted: HSL(var(--text-muted-hsl));
+    
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 25px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 50px rgba(0, 0, 0, 0.6);
     --shadow-glow: 0 0 35px rgba(139, 92, 246, 0.3);
     --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    
+    --card-inner-bg: rgba(255, 255, 255, 0.03);
+    --border-light: rgba(255, 255, 255, 0.05);
+    --nav-bg: rgba(26, 31, 53, 0.8);
+    --nav-scrolled: rgba(26, 31, 53, 0.95);
 }
+
 
 /* Global Styles */
 * {
@@ -91,7 +110,7 @@ section h2 {
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
-    background: rgba(26, 31, 53, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 0;
@@ -104,10 +123,10 @@ section h2 {
 }
 
 .navbar.scrolled {
-    background: rgba(26, 31, 53, 0.95);
+    background: var(--nav-scrolled);
     backdrop-filter: blur(20px);
     box-shadow: var(--shadow-md);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .logo {
@@ -346,7 +365,7 @@ section h2 {
 
 .btn-download {
     background: var(--green-gradient);
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 .btn-download:hover {
@@ -583,7 +602,7 @@ section h2 {
 }
 
 .skill-category h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
     display: flex;
@@ -607,8 +626,8 @@ section h2 {
 }
 
 .skill-box {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--card-inner-bg);
+    border: 1px solid var(--border-light);
     border-radius: 14px;
     padding: 1.2rem 0.8rem;
     display: flex;
@@ -710,7 +729,7 @@ section h2 {
 }
 
 .ai-skill-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-inner-bg);
     border: 1px solid rgba(16, 185, 129, 0.2);
     border-radius: 16px;
     padding: 2.5rem 2rem;
@@ -834,10 +853,10 @@ section h2 {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-color);
     border-radius: 24px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
     display: flex;
@@ -1047,7 +1066,7 @@ section h2 {
 
 .project-links .btn-demo, .project-links .btn-github {
     padding: 0.6rem 1.2rem;
-    border-radius: 8px;
+    border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
     transition: var(--transition);
@@ -1059,16 +1078,15 @@ section h2 {
 }
 
 .project-links .btn-demo {
-    background: #10b981;
+    background: var(--primary-gradient);
     color: white !important;
-    border: 1px solid #10b981;
+    border: none;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
 .project-links .btn-demo:hover {
-    background: #059669;
-    border-color: #059669;
     transform: translateY(-3px) !important;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
 }
 
 .project-links .btn-github {
@@ -1152,15 +1170,15 @@ section h2 {
 
 .timeline-content {
     padding: 2rem;
-    background: #1a1f2e;
+    background: var(--card-color);
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
     transition: var(--transition);
 }
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    background: #22293d;
+    background: var(--card-hover);
     border-color: rgba(129, 140, 248, 0.3);
 }
 
@@ -1291,7 +1309,7 @@ section h2 {
     background: var(--primary-gradient);
     color: var(--text-color);
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
@@ -1301,6 +1319,14 @@ section h2 {
 .contact-form button:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-glow);
+}
+
+.contact-form button:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.6;
 }
 
 #responseMsg {
@@ -1632,6 +1658,11 @@ footer {
     visibility: visible;
 }
 
+.scroll-to-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: var(--shadow-glow);
+}
+
 /* Certificates Section */
 .certificates {
     padding: 100px 0;
@@ -1648,7 +1679,7 @@ footer {
     background: var(--card-color);
     padding: 0; /* Remove padding for image layout */
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
     text-align: center;
     transition: var(--transition);
     position: relative;
@@ -1716,7 +1747,7 @@ footer {
 }
 
 .certificate-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
     color: var(--text-color);
 }
@@ -1751,4 +1782,127 @@ footer {
     background: var(--primary-gradient);
     color: var(--text-color);
     transform: scale(1.05);
+}
+
+
+/* ==========================================================================
+   Scroll Reveal Animations
+   ========================================================================== */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   Certificates Page: Filter Tabs & Gallery Styles
+   ========================================================================== */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-light);
+    background: var(--card-color);
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-gradient);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Certificate Cards Filter Transition */
+.certificate-card {
+    transition: opacity 0.4s ease, transform 0.4s ease, display 0.4s ease;
+}
+
+.certificate-card.hidden {
+    display: none;
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+}
+
+/* ==========================================================================
+   Lightbox Image Modal
+   ========================================================================== */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 10, 15, 0.95);
+    backdrop-filter: blur(15px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+
+.lightbox-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-lg);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lightbox-modal.active .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
