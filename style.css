@@ -7,18 +7,18 @@
     --background-secondary: #080a0f;
     --card-color: #1a1f2e;
     --card-hover: #22293d;
-    --primary-color: #c5a021;
-    --primary-gradient: linear-gradient(135deg, #c5a021 0%, #d4af37 100%);
+    --primary-color: #8b5cf6;
+    --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
     --accent-gradient: linear-gradient(135deg, #e5e7eb 0%, #9ca3af 100%);
     --blue-gradient: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
-    --green-gradient: linear-gradient(135deg, #c5a021 0%, #907810 100%);
+    --green-gradient: linear-gradient(135deg, #2dd4bf 0%, #10b981 100%);
     --text-color: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 25px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 50px rgba(0, 0, 0, 0.6);
-    --shadow-glow: 0 0 35px rgba(197, 160, 33, 0.3);
+    --shadow-glow: 0 0 35px rgba(139, 92, 246, 0.3);
     --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -213,7 +213,7 @@ section h2 {
 .circle-1 {
     width: 500px;
     height: 500px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.6), rgba(99, 102, 241, 0.6));
     top: -10%;
     left: -10%;
     animation-delay: 0s;
@@ -222,7 +222,7 @@ section h2 {
 .circle-2 {
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.5), rgba(45, 212, 191, 0.5));
     bottom: -10%;
     right: -10%;
     animation-delay: 5s;
@@ -231,7 +231,7 @@ section h2 {
 .circle-3 {
     width: 350px;
     height: 350px;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(14, 165, 233, 0.4));
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -464,7 +464,7 @@ section h2 {
 
 .profile-image:hover img {
     transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(197, 160, 33, 0.4);
+    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);
 }
 
 .profile-overlay {
@@ -620,7 +620,7 @@ section h2 {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(197, 160, 33, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
     opacity: 0;
     transition: var(--transition);
     transform: scale(0.5);
@@ -635,22 +635,38 @@ section h2 {
 .skill-box:hover {
     transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(197, 160, 33, 0.4);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(197, 160, 33, 0.1);
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.1);
 }
 
+/* Skill Icons New Logic: Monochrome to Brand Color on Hover */
 .skill-icon {
     font-size: 2.5rem;
-    transition: var(--transition);
+    color: var(--text-muted); /* Uniform soft color by default */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     position: relative;
     z-index: 1;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.05));
 }
 
 .skill-box:hover .skill-icon {
-    transform: scale(1.1) translateY(-5px);
-    filter: drop-shadow(0 0 15px currentColor);
+    transform: scale(1.15) translateY(-5px);
 }
+
+/* Brand colors on hover */
+.skill-box:hover .fa-html5 { color: #E34F26; filter: drop-shadow(0 0 12px rgba(227, 79, 38, 0.6)); }
+.skill-box:hover .fa-css3-alt { color: #1572B6; filter: drop-shadow(0 0 12px rgba(21, 114, 182, 0.6)); }
+.skill-box:hover .fa-js { color: #F7DF1E; filter: drop-shadow(0 0 12px rgba(247, 223, 30, 0.6)); }
+.skill-box:hover .fa-react { color: #61DAFB; filter: drop-shadow(0 0 12px rgba(97, 218, 251, 0.6)); }
+.skill-box:hover .fa-bootstrap { color: #7952B3; filter: drop-shadow(0 0 12px rgba(121, 82, 179, 0.6)); }
+.skill-box:hover .fa-node-js { color: #339933; filter: drop-shadow(0 0 12px rgba(51, 153, 51, 0.6)); }
+.skill-box:hover .fa-database { color: #47A248; filter: drop-shadow(0 0 12px rgba(71, 162, 72, 0.6)); }
+.skill-box:hover .fa-java { color: #007396; filter: drop-shadow(0 0 12px rgba(0, 115, 150, 0.6)); }
+.skill-box:hover .fa-network-wired { color: #00d2ff; filter: drop-shadow(0 0 12px rgba(0, 210, 255, 0.6)); }
+.skill-box:hover .fa-git-alt { color: #F05032; filter: drop-shadow(0 0 12px rgba(240, 80, 50, 0.6)); }
+.skill-box:hover .fa-github { color: #ffffff; filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6)); }
+.skill-box:hover .fa-code { color: #007ACC; filter: drop-shadow(0 0 12px rgba(0, 122, 204, 0.6)); }
+.skill-box:hover .fa-python { color: #3776AB; filter: drop-shadow(0 0 12px rgba(55, 118, 171, 0.6)); }
 
 .skill-name {
     font-size: 0.9rem;
@@ -1022,11 +1038,11 @@ section h2 {
     width: 20px;
     height: 20px;
     background: var(--background-color);
-    border: 3px solid #00d2ff;
+    border: 3px solid #818cf8;
     border-radius: 50%;
     z-index: 2;
     top: 25px;
-    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+    box-shadow: 0 0 15px rgba(129, 140, 248, 0.6);
 }
 
 .timeline-item:nth-child(odd) {
@@ -1058,11 +1074,11 @@ section h2 {
 .timeline-content:hover {
     transform: translateY(-5px);
     background: #22293d;
-    border-color: rgba(0, 210, 255, 0.3);
+    border-color: rgba(129, 140, 248, 0.3);
 }
 
 .timeline-content h3 {
-    color: #00d2ff;
+    color: #818cf8;
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
 }
@@ -1180,7 +1196,7 @@ section h2 {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(197, 160, 33, 0.2);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
 }
 
 .contact-form button {
@@ -1236,7 +1252,7 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(197, 160, 33, 0.1);
+    background: rgba(139, 92, 246, 0.1);
     border-radius: 50%;
 }
 
@@ -1445,7 +1461,7 @@ footer {
 .certificate-card:hover {
     transform: translateY(-10px);
     background: var(--card-hover);
-    border-color: rgba(197, 160, 33, 0.3);
+    border-color: rgba(139, 92, 246, 0.3);
     box-shadow: var(--shadow-lg);
 }
 
