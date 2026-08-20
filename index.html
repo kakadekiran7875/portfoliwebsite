@@ -128,9 +128,9 @@
                     </div>
 
                     <div class="about-buttons" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-                        <button class="btn btn-download" onclick="downloadCV()" style="margin-top: 0;">
+                        <a href="Kiran_Kakade_Resume.pdf" download="Kiran_Kakade_Resume.pdf" class="btn btn-download" style="margin-top: 0; text-decoration: none; display: inline-flex; align-items: center;">
                             <i class="fas fa-download"></i> Download My CV
-                        </button>
+                        </a>
                         <a href="https://www.linkedin.com/in/kiran-kakade-1a30ab2aa" target="_blank" class="btn btn-linkedin">
                             <i class="fab fa-linkedin"></i> Connect on LinkedIn
                         </a>
@@ -711,18 +711,7 @@
         }
         type();
 
-        // Download CV
-        function downloadCV() {
-            const cvContent = `KIRAN KAKADE - Full Stack Developer CV Data...`;
-            const blob = new Blob([cvContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Kiran_Kakade_CV.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
+
 
         // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
