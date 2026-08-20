@@ -951,6 +951,13 @@ section h2 {
     transform: translateX(3px);
 }
 
+/* Green Theme additions for Projects Section */
+.tech-stack.tech-stack-green span {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
 .project-links .btn-demo, .project-links .btn-github {
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
@@ -965,92 +972,16 @@ section h2 {
 }
 
 .project-links .btn-demo {
-    color: white !important;
-}
-
-/* Green Theme */
-.theme-green .tech-stack span {
-    background: rgba(16, 185, 129, 0.1);
-    color: #10b981;
-    border: 1px solid rgba(16, 185, 129, 0.2);
-}
-.theme-green .btn-demo {
     background: #10b981;
+    color: white !important;
     border: 1px solid #10b981;
 }
-.theme-green .btn-demo:hover {
+
+.project-links .btn-demo:hover {
     background: #059669;
     border-color: #059669;
     transform: translateY(-3px) !important;
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-}
-
-/* Purple Theme */
-.theme-purple .tech-stack span {
-    background: rgba(139, 92, 246, 0.1);
-    color: #8b5cf6;
-    border: 1px solid rgba(139, 92, 246, 0.2);
-}
-.theme-purple .btn-demo {
-    background: #8b5cf6;
-    border: 1px solid #8b5cf6;
-}
-.theme-purple .btn-demo:hover {
-    background: #7c3aed;
-    border-color: #7c3aed;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
-}
-
-/* Blue Theme */
-.theme-blue .tech-stack span {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
-    border: 1px solid rgba(59, 130, 246, 0.2);
-}
-.theme-blue .btn-demo {
-    background: #3b82f6;
-    border: 1px solid #3b82f6;
-}
-.theme-blue .btn-demo:hover {
-    background: #2563eb;
-    border-color: #2563eb;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-}
-
-/* Orange Theme */
-.theme-orange .tech-stack span {
-    background: rgba(249, 115, 22, 0.1);
-    color: #f97316;
-    border: 1px solid rgba(249, 115, 22, 0.2);
-}
-.theme-orange .btn-demo {
-    background: #f97316;
-    border: 1px solid #f97316;
-}
-.theme-orange .btn-demo:hover {
-    background: #ea580c;
-    border-color: #ea580c;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-}
-
-/* Pink Theme */
-.theme-pink .tech-stack span {
-    background: rgba(236, 72, 153, 0.1);
-    color: #ec4899;
-    border: 1px solid rgba(236, 72, 153, 0.2);
-}
-.theme-pink .btn-demo {
-    background: #ec4899;
-    border: 1px solid #ec4899;
-}
-.theme-pink .btn-demo:hover {
-    background: #db2777;
-    border-color: #db2777;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
 }
 
 .project-links .btn-github {
