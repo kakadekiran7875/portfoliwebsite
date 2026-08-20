@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Map form fields to template variables
         const templateParams = {
-            name: contactForm.from_name.value,
-            email: contactForm.user_email.value,
-            message: contactForm.message.value
+            name: contactForm.querySelector('[name="from_name"]').value,
+            email: contactForm.querySelector('[name="user_email"]').value,
+            message: contactForm.querySelector('[name="message"]').value
         };
 
         emailjs.send("service_hpz32rr", "template_0bali93", templateParams)
