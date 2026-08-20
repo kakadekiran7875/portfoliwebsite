@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Kakade | Full Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to Premium Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Kiran <span>Kakade</span></a>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-circle circle-1"></div>
+            <div class="gradient-circle circle-2"></div>
+            <div class="gradient-circle circle-3"></div>
+        </div>
+
+        <div class="container hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1><span class="highlight">Kiran Kakade</span></h1>
+            <div class="typewriter" id="typewriter-text"></div>
+            <p class="hero-description">"Learning and building projects to create innovative solutions."</p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/kakadekiran7875" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kiran-kakade-1a30ab2aa" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/kakade_kiran_2211_/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="section-subtitle">A brief introduction about my journey and goals</p>
+
+            <div class="about-content">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="kiran.png" alt="Kiran Kakade">
+                        <div class="profile-overlay">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h3>Full Stack Developer & Student</h3>
+                    <p>I'm a Computer Engineering student at SPPU Pune (2023-2027) with a passion for building
+                        innovative web applications. I specialize in full-stack development using Java, React, Node.js,
+                        and modern web technologies.</p>
+                    <p>My journey in tech began with curiosity about how websites work, which evolved into building
+                        real-world projects. I completed a Web Development internship at InternPe where I honed my
+                        skills in modern web development practices.</p>
+                    <p>I'm constantly learning new technologies and working on projects that make a difference. My goal
+                        is to become a skilled full-stack developer and contribute to impactful tech solutions.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <h4>20+</h4>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-award"></i>
+                            <h4>1+</h4>
+                            <p>Internship</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-code-branch"></i>
+                            <h4>10+</h4>
+                            <p>Technologies</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <h4>BE</h4>
+                            <p>Computer Eng.</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-download" onclick="downloadCV()">
+                        <i class="fas fa-download"></i> Download My CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <p class="section-subtitle">Technologies and tools I work with daily</p>
+
+            <div class="skills-categories">
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>HTML5 & CSS3</span><span>75%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>JavaScript</span><span>50%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>React.js</span><span>70%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Bootstrap</span><span>60%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend & Database</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Node.js & Express</span><span>60%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>MongoDB</span><span>70%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>REST APIs</span><span>65%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Java</span><span>55%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Programming</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Git & GitHub</span><span>75%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>VS Code</span><span>85%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Python</span><span>60%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Problem Solving</span><span>78%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Some of my recent work</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div
+                            style="background: var(--primary-gradient); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
+                            🛒</div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-featured online shopping platform with product catalog, cart, auth, and payment
+                            integration.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div
+                            style="background: var(--blue-gradient); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
+                            📋</div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management System</h3>
+                        <p>Productivity app for students to organize assignments, set reminders, and track deadlines.
+                        </p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Firebase</span>
+                            <span>Material-UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div
+                            style="background: var(--green-gradient); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
+                            🌤️</div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Forecast App</h3>
+                        <p>Responsive weather app with real-time data, 5-day forecasts, and beautiful visualizations.
+                        </p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span>
+                            <span>Weather API</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>Certifications</h2>
+            <p class="section-subtitle">Verified achievements and learning milestones</p>
+
+            <div class="certificates-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="interpe complete.jpg" alt="Web Development Internship Certificate">
+                        <div class="cert-overlay">
+                            <a href="interpe complete.jpg" target="_blank" class="overlay-btn"><i
+                                    class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Web Development Internship</h3>
+                        <p class="issuer">InternPe</p>
+                        <p class="date">March 2025</p>
+                        <a href="interpe complete.jpg" download="InternPe_Web_Development_Certificate.jpg"
+                            class="cert-link">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="vit VERSANIX TECH.jpeg" alt="Versanix Tech Certificate">
+                        <div class="cert-overlay">
+                            <a href="vit VERSANIX TECH.jpeg" target="_blank" class="overlay-btn"><i
+                                    class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Versanix Tech</h3>
+                        <p class="issuer">VERSANIX TECHNOLOGIES</p>
+                        <p class="date">March 2026</p>
+                        <a href="vit VERSANIX TECH.jpeg" download="Versanix_Tech_Certificate.jpeg"
+                            class="cert-link">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="vit hackthon.jpeg" alt="AI Symposium Hackathon Certificate">
+                        <div class="cert-overlay">
+                            <a href="vit hackthon.jpeg" target="_blank" class="overlay-btn"><i
+                                    class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>AI Symposium Hackathon</h3>
+                        <p class="issuer">VIT Pune</p>
+                        <p class="date">March 2026</p>
+                        <a href="vit hackthon.jpeg" download="AI_Symposium_Hackathon_Certificate.jpeg"
+                            class="cert-link">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="hackthon .jpg" alt="IEEE Hackathon Certificate">
+                        <div class="cert-overlay">
+                            <a href="hackthon .jpg" target="_blank" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>IEEE Hackathon</h3>
+                        <p class="issuer">Technical Event</p>
+                        <p class="date">October 2025</p>
+                        <a href="hackthon .jpg" download="IEEE_Hackathon_Certificate.jpg" class="cert-link">Download <i
+                                class="fas fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Data Visualization using python .png"
+                            alt="Data Visualization Using Python Certificate">
+                        <div class="cert-overlay">
+                            <a href="Data Visualization using python .png" target="_blank" class="overlay-btn"><i
+                                    class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Data Visualization Using Python</h3>
+                        <p class="issuer">Python Specialization</p>
+                        <p class="date">August 2025</p>
+                        <a href="Data Visualization using python .png"
+                            download="Data_Visualization_Using_Python_Certificate.png" class="cert-link">Download <i
+                                class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience/Timeline Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Education & Experience</h2>
+            <p class="section-subtitle">My professional and academic journey</p>
+
+            <div class="timeline">
+                <!-- 1. Bachelor of Computer Engineering -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>🎓 Bachelor of Computer Engineering</h3>
+                        <p class="company">SPPU, Pune</p>
+                        <p class="date">2023 - 2027</p>
+                        <div class="exp-description">
+                            <p>Currently pursuing B.E in Computer Engineering with focus on full stack development and software engineering. Actively involved in technical events and building real-world applications.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-view-more">View More</a>
+                    </div>
+                </div>
+
+                <!-- 2. Web Development Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>🧑‍💻 Web Development Intern</h3>
+                        <p class="company">InternPe</p>
+                        <p class="date">24 Feb 2025 – 23 Mar 2025</p>
+                        <div class="exp-description">
+                            <p>During my internship at InternPe, I gained hands-on experience in web development by creating multiple front-end projects using HTML, CSS, and JavaScript. I learned the complete web design process — from building responsive layouts to deploying functional web pages. The internship enhanced my skills in UI/UX design, coding best practices, and teamwork in a professional environment.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-view-more">View More</a>
+                    </div>
+                </div>
+
+                <!-- 3. ThinkStack Technology -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3><a href="https://www.linkedin.com/company/thinkstack-technologies/posts/?feedView=all" target="_blank" style="color: #00d2ff; text-decoration: none;">🚀 ThinkStack Technology</a></h3>
+                        <p class="company">Self-Employed</p>
+                        <p class="date">Present (Live Working)</p>
+                        <div class="exp-description">
+                            <p>Currently working as a self-employed professional at ThinkStack Technology, focusing on innovative tech solutions and live project development. Building and managing scalable web architectures and digital products.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-view-more">View More</a>
+                    </div>
+                </div>
+
+                <!-- 4. IEEE Hackathon -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>🏆 IEEE Hackathon</h3>
+                        <p class="company">MMCOE Pune</p>
+                        <p class="date">October 2025</p>
+                        <div class="exp-description">
+                            <p>Participated in the IEEE Hackathon where we developed 'Smart Agriculture Assistance'. This project aimed to help farmers with real-time data and automated solutions for better crop management.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-view-more">View More</a>
+                    </div>
+                </div>
+
+                <!-- 5. AI Symposium Hackathon -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>🤖 AI Symposium Hackathon</h3>
+                        <p class="company">VIT Pune</p>
+                        <p class="date">March 2025</p>
+                        <div class="exp-description">
+                            <p>Engaged in the AI Symposium Hackathon, working on a 'Deepfake Detection' project. Utilized machine learning techniques to identify manipulated media and enhance digital security.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-view-more">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Have a project in mind? Let's talk!</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Me</h3>
+                            <p>kakadekiran2211@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call Me</h3>
+                            <p>+91 7875024546</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Pune, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <input type="text" name="from_name" placeholder="Your Name" required>
+                    <input type="email" name="user_email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p id="responseMsg"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kiran Kakade. All rights reserved.</p>
+                <div class="footer-icons">
+                    <a href="https://github.com/kakadekiran7875" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kiran-kakade-1a30ab2aa" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/kakade_kiran_2211_/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <a href="#" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Hamburger Menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Typewriter Effect
+        const typewriterElement = document.getElementById('typewriter-text');
+        const words = ["Java Full Stack Developer", "Python Developer", "REST API Expert", "AI & Copilot Enthusiast"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+        type();
+
+        // Download CV
+        function downloadCV() {
+            const cvContent = `KIRAN KAKADE - Full Stack Developer CV Data...`;
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Kiran_Kakade_CV.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll to top visibility
+            const scrollToTop = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+
+        // View More Toggle
+        const viewMoreBtns = document.querySelectorAll('.btn-view-more');
+        viewMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const description = this.previousElementSibling;
+                description.classList.toggle('expanded');
+
+                if (description.classList.contains('expanded')) {
+                    this.textContent = 'View Less';
+                } else {
+                    this.textContent = 'View More';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
