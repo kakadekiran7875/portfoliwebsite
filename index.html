@@ -132,9 +132,14 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-download" onclick="downloadCV()">
-                        <i class="fas fa-download"></i> Download My CV
-                    </button>
+                    <div class="about-buttons" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                        <button class="btn btn-download" onclick="downloadCV()" style="margin-top: 0;">
+                            <i class="fas fa-download"></i> Download My CV
+                        </button>
+                        <a href="https://www.linkedin.com/in/kiran-kakade-1a30ab2aa" target="_blank" class="btn btn-linkedin">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,31 +154,27 @@
             <div class="skills-categories">
                 <!-- Frontend -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>HTML5 & CSS3</span><span>75%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 75%"></div>
-                            </div>
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-box">
+                            <i class="fab fa-html5 skill-icon" style="color: #E34F26;"></i>
+                            <span class="skill-name">HTML5</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>JavaScript</span><span>50%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 50%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fab fa-css3-alt skill-icon" style="color: #1572B6;"></i>
+                            <span class="skill-name">CSS3</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>React.js</span><span>70%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 70%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fab fa-js skill-icon" style="color: #F7DF1E;"></i>
+                            <span class="skill-name">JavaScript</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>Bootstrap</span><span>60%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 60%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fab fa-react skill-icon" style="color: #61DAFB;"></i>
+                            <span class="skill-name">React.js</span>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-bootstrap skill-icon" style="color: #7952B3;"></i>
+                            <span class="skill-name">Bootstrap</span>
                         </div>
                     </div>
                 </div>
@@ -181,63 +182,102 @@
                 <!-- Backend -->
                 <div class="skill-category">
                     <h3><i class="fas fa-server"></i> Backend & Database</h3>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>Node.js & Express</span><span>60%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 60%"></div>
-                            </div>
+                    <div class="skills-grid">
+                        <div class="skill-box">
+                            <i class="fab fa-node-js skill-icon" style="color: #339933;"></i>
+                            <span class="skill-name">Node.js</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>MongoDB</span><span>70%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 70%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fas fa-database skill-icon" style="color: #47A248;"></i>
+                            <span class="skill-name">MongoDB</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>REST APIs</span><span>65%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 65%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fab fa-java skill-icon" style="color: #007396;"></i>
+                            <span class="skill-name">Java</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>Java</span><span>55%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 55%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fas fa-network-wired skill-icon" style="color: #00f2fe;"></i>
+                            <span class="skill-name">REST APIs</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tools -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Programming</h3>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>Git & GitHub</span><span>75%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 75%"></div>
-                            </div>
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skills-grid">
+                        <div class="skill-box">
+                            <i class="fab fa-git-alt skill-icon" style="color: #F05032;"></i>
+                            <span class="skill-name">Git</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>VS Code</span><span>85%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fab fa-github skill-icon" style="color: #ffffff;"></i>
+                            <span class="skill-name">GitHub</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>Python</span><span>60%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 60%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fas fa-code skill-icon" style="color: #007ACC;"></i>
+                            <span class="skill-name">VS Code</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info"><span>Problem Solving</span><span>78%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 78%"></div>
-                            </div>
+                        <div class="skill-box">
+                            <i class="fab fa-python skill-icon" style="color: #3776AB;"></i>
+                            <span class="skill-name">Python</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Skills Section -->
+    <section id="ai-skills" class="ai-skills">
+        <div class="container">
+            <h2>AI & <span class="text-green">Data Skills</span></h2>
+            <p class="section-subtitle">My expertise in Artificial Intelligence and Data Handling</p>
+
+            <div class="ai-skills-container">
+                <!-- Category 1 -->
+                <div class="ai-skill-card">
+                    <div class="ai-icon-wrapper">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Fundamentals</h3>
+                    <p>Basic Machine Learning concepts, understanding of how AI models work, and knowledge of data usage in AI systems.</p>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="ai-skill-card">
+                    <div class="ai-icon-wrapper">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Prompt Engineering</h3>
+                    <p>Designing effective prompts, structuring inputs for better output, and optimizing AI-generated responses.</p>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="ai-skill-card">
+                    <div class="ai-icon-wrapper">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Tools</h3>
+                    <p>ChatGPT, Claude AI, AI website builders, and image/content generation tools.</p>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="ai-skill-card">
+                    <div class="ai-icon-wrapper">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Integrating AI APIs, building chatbot systems, and adding intelligent features to web applications.</p>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="ai-skill-card">
+                    <div class="ai-icon-wrapper">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Handling</h3>
+                    <p>Working with JSON data, handling API responses, and managing dynamic data in applications.</p>
                 </div>
             </div>
         </div>
@@ -253,23 +293,21 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div
-                            style="background: var(--primary-gradient); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
-                            🛒</div>
+                        <img src="smartgodown.png" alt="SmartGodown Logo">
                         <div class="project-overlay">
-                            <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                            <a href="https://smartgodown.in" target="_blank" class="overlay-btn"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-featured online shopping platform with product catalog, cart, auth, and payment
-                            integration.</p>
-                        <div class="tech-stack">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Stripe</span>
+                        <h3>SmartGodown</h3>
+                        <p>A smart inventory management system to track stock, manage warehouse operations, and provide real-time updates with user authentication and dashboard analytics.</p>
+                        <div class="tech-stack tech-stack-green">
+                            <span>TypeScript</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://smartgodown.in" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -277,22 +315,22 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div
-                            style="background: var(--blue-gradient); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
-                            📋</div>
+                        <img src="smart_agri_logo.png" alt="Smart Agriculture Assistance Logo">
                         <div class="project-overlay">
-                            <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                            <a href="https://fastidious-nougat-e155c8.netlify.app/" target="_blank" class="overlay-btn"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Task Management System</h3>
-                        <p>Productivity app for students to organize assignments, set reminders, and track deadlines.
-                        </p>
-                        <div class="tech-stack">
-                            <span>React</span>
-                            <span>Firebase</span>
-                            <span>Material-UI</span>
+                        <h3>Smart Agriculture Assistance</h3>
+                        <p>A smart agriculture system that helps farmers with crop recommendations, weather insights, and decision support for better productivity.</p>
+                        <div class="tech-stack tech-stack-green">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://fastidious-nougat-e155c8.netlify.app/" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -300,22 +338,87 @@
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div
-                            style="background: var(--green-gradient); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
-                            🌤️</div>
+                        <img src="ai_ad_logo.png" alt="AI Ad Management System Logo">
                         <div class="project-overlay">
-                            <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                            <a href="https://ryzeai2026.netlify.app/" target="_blank" class="overlay-btn"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Weather Forecast App</h3>
-                        <p>Responsive weather app with real-time data, 5-day forecasts, and beautiful visualizations.
-                        </p>
-                        <div class="tech-stack">
+                        <h3>AI Ad Management System</h3>
+                        <p>An AI-based system to manage and optimize advertisements by analyzing user behavior and improving ad performance.</p>
+                        <div class="tech-stack tech-stack-green">
                             <span>JavaScript</span>
-                            <span>Weather API</span>
-                            <span>CSS3</span>
+                            <span>AI APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ryzeai2026.netlify.app/" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="smart_calc_logo.png" alt="Smart Calculator Logo">
+                        <div class="project-overlay">
+                            <a href="https://smartcalculatorweb.netlify.app/" target="_blank" class="overlay-btn"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart Calculator</h3>
+                        <p>A responsive calculator web app capable of performing basic and advanced calculations with a clean UI.</p>
+                        <div class="tech-stack tech-stack-green">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://smartcalculatorweb.netlify.app/" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="ecommerce_logo.png" alt="E-Commerce Website Logo">
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>A complete online shopping platform with product listing, cart functionality, and checkout system.</p>
+                        <div class="tech-stack tech-stack-green">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Backend</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="portfolio_logo.png" alt="Portfolio Website Logo">
+                        <div class="project-overlay">
+                            <a href="https://kirankakade.netlify.app/" target="_blank" class="overlay-btn"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website to showcase skills, projects, and achievements with responsive design.</p>
+                        <div class="tech-stack tech-stack-green">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://kirankakade.netlify.app/" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>

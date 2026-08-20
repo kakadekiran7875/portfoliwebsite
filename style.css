@@ -338,12 +338,24 @@ section h2 {
 .btn-download {
     background: var(--green-gradient);
     color: var(--text-color);
-    margin-top: 2rem;
 }
 
 .btn-download:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(67, 233, 123, 0.4);
+}
+
+.btn-linkedin {
+    background: #0077b5;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 119, 181, 0.3);
+}
+
+.btn-linkedin:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 119, 181, 0.5);
+    background: #0088cc;
 }
 
 .hero-socials {
@@ -578,65 +590,183 @@ section h2 {
     background-clip: text;
 }
 
-.skill-bars {
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 1.2rem 0.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-}
-
-.skill-bar {
-    width: 100%;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-}
-
-.skill-info span:first-child {
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.skill-info span:last-child {
-    color: var(--text-muted);
-    font-weight: 600;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
     overflow: hidden;
-    position: relative;
 }
 
-.progress {
-    height: 100%;
-    background: var(--primary-gradient);
-    border-radius: 10px;
-    transition: width 1.5s ease;
-    position: relative;
-    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+.skill-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(197, 160, 33, 0.15) 0%, transparent 60%);
+    opacity: 0;
+    transition: var(--transition);
+    transform: scale(0.5);
+    z-index: 0;
 }
 
-.progress::after {
+.skill-box:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(197, 160, 33, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(197, 160, 33, 0.1);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+}
+
+.skill-box:hover .skill-icon {
+    transform: scale(1.1) translateY(-5px);
+    filter: drop-shadow(0 0 15px currentColor);
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.skill-box:hover .skill-name {
+    color: var(--text-color);
+}
+
+/* AI & Data Skills Section */
+.ai-skills {
+    background: var(--background-secondary);
+}
+
+.text-green {
+    color: #10b981 !important;
+    background: none !important;
+    -webkit-text-fill-color: #10b981 !important;
+}
+
+.ai-skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.ai-skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ai-skill-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: shimmer 2s infinite;
+    width: 4px;
+    height: 100%;
+    background: #10b981;
+    transition: var(--transition);
 }
 
-@keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+.ai-skill-card:hover {
+    transform: translateY(-10px);
+    background: rgba(16, 185, 129, 0.05);
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(16, 185, 129, 0.15);
+}
+
+.ai-skill-card:hover::before {
+    width: 100%;
+    opacity: 0.05;
+}
+
+.ai-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    transition: var(--transition);
+}
+
+.ai-skill-card:hover .ai-icon-wrapper {
+    background: #10b981;
+    border-color: #10b981;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+.ai-icon-wrapper i {
+    font-size: 1.8rem;
+    color: #10b981;
+    transition: var(--transition);
+}
+
+.ai-skill-card:hover .ai-icon-wrapper i {
+    color: #ffffff;
+}
+
+.ai-skill-card h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.ai-skill-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    transition: var(--transition);
+}
+
+.ai-skill-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Projects Section */
@@ -697,12 +827,14 @@ section h2 {
     position: relative;
     overflow: hidden;
     height: 220px;
+    background-color: #ffffff;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #ffffff;
     transition: var(--transition);
 }
 
@@ -801,6 +933,51 @@ section h2 {
 .project-links a:hover {
     color: var(--text-color);
     transform: translateX(3px);
+}
+
+/* Green Theme additions for Projects Section */
+.tech-stack.tech-stack-green span {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.project-links .btn-demo, .project-links .btn-github {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.project-links .btn-demo {
+    background: #10b981;
+    color: white !important;
+    border: 1px solid #10b981;
+}
+
+.project-links .btn-demo:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.project-links .btn-github {
+    background: transparent;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-links .btn-github:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    transform: translateY(-3px) !important;
 }
 
 /* Experience Section - Timeline */
