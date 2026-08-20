@@ -2,7 +2,9 @@
 
 Welcome to the repository of my personal portfolio website! This site showcases my profile, academic journey, tech stack, certifications, and major projects. 
 
-🔗 **Live Demo:** [kirankakade.netlify.app](https://kirankakade.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen?style=for-the-badge&logo=netlify)](https://kirankakade.netlify.app/)
+
+🔗 **Live Demo Link:** [kirankakade.netlify.app](https://kirankakade.netlify.app/)
 
 ---
 
