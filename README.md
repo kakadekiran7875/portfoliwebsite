@@ -86,34 +86,50 @@ Here is a summary of the key projects featured in my portfolio:
 
 ## 🚀 How to Run the Portfolio Locally
 
-Since this is a frontend web application, you can easily run it on your local machine:
+Follow these instructions to clone the repository and run the website locally:
 
-### Method 1: Double-click (Easiest)
-1. Clone or download this repository.
-2. Locate the `index.html` file in the root folder.
-3. Double-click `index.html` to open it in your default web browser.
-
-### Method 2: Local Development Server (Recommended)
-Using a local server prevents potential CORS issues and ensures smooth rendering of dynamic content.
-
-#### Using VS Code "Live Server" Extension:
-1. Open the project folder in VS Code.
-2. Install the **Live Server** extension (if not already installed).
-3. Click the **"Go Live"** button at the bottom-right corner of VS Code, or right-click `index.html` and select **"Open with Live Server"**.
-
-#### Using Python:
-If you have Python installed, run the following command in your terminal/command prompt within the project directory:
+### 1. Clone the Repository
+Open your terminal or command prompt and run the following command:
 ```bash
-python -m http.server 8000
+git clone https://github.com/kakadekiran7875/portfoliwebsite.git
+cd portfoliwebsite
 ```
-Then, open your browser and navigate to `http://localhost:8000`.
 
-#### Using Nodejs (npx):
-Run the following command in the project directory:
-```bash
-npx serve
-```
-Then, navigate to the local URL displayed in the terminal.
+### 2. Choose a Method to Run
+
+#### Option A: Local Development Server (Highly Recommended)
+Using a local server prevents potential CORS issues and ensures all interactive features load correctly.
+
+* **VS Code "Live Server" Extension:**
+  1. Open the cloned folder in VS Code.
+  2. Install the **Live Server** extension if you haven't already.
+  3. Click **"Go Live"** in the status bar (bottom-right) or right-click `index.html` and select **"Open with Live Server"**.
+* **Using Python:**
+  If you have Python installed, run:
+  ```bash
+  python -m http.server 8000
+  ```
+  Then, navigate to `http://localhost:8000` in your web browser.
+* **Using Node.js (npx):**
+  Run:
+  ```bash
+  npx serve
+  ```
+  Then, navigate to the local URL displayed in the terminal.
+
+#### Option B: Open Directly (Quickest)
+1. Navigate to the project root directory.
+2. Double-click the `index.html` file to open it directly in any web browser.
+
+---
+
+## 📧 Contact Form Configuration (EmailJS)
+The contact form uses **EmailJS** to send messages directly to your inbox without a custom backend server. If you want to update it to use your own EmailJS account:
+1. Sign up on [EmailJS](https://www.emailjs.com/).
+2. Create an Email Service and a Email Template.
+3. Open `script.js` and update:
+   * The public key in `emailjs.init("YOUR_PUBLIC_KEY")`.
+   * The Service ID and Template ID in `emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)`.
 
 ---
 
