@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButton.disabled = true;
         submitButton.innerText = "Sending...";
 
-        emailjs.sendForm("service_hpz32rr", "template_0bali93", contactForm)
+        // Map form fields to template variables
+        const templateParams = {
+            name: contactForm.from_name.value,
+            email: contactForm.user_email.value,
+            message: contactForm.message.value
+        };
+
+        emailjs.send("service_hpz32rr", "template_0bali93", templateParams)
             .then(() => {
                 // --- 2. Show success message ---
                 responseMsg.innerText = "✅ Message sent successfully!";
