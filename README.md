@@ -33,8 +33,7 @@ I'm a **Computer Engineering student at SPPU Pune (2023–2027)** passionate abo
 
 ## 🛠️ Core Skills
 
-- **Frontend:** HTML5, CSS3, JavaScript, React.js, Node.js, Bootstrap
-- **Backend & Database:** Node.js, MongoDB, Java, REST APIs, PostgreSQL, Python
+- HTML5, CSS3, JavaScript, React.js, Node.js, Bootstrap
 - **AI & Data:** Prompt Engineering, AI Tool Integration, Data Handling (JSON, API integration)
 - **Tools:** Git & GitHub, VS Code
 
