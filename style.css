@@ -564,7 +564,7 @@ section h2 {
 /* Skills Section */
 .skills-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2.5rem;
 }
 
@@ -704,7 +704,7 @@ section h2 {
 
 .ai-skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -829,7 +829,7 @@ section h2 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 2rem;
 }
 
@@ -1331,6 +1331,10 @@ section h2 {
     background: var(--card-hover);
 }
 
+.info-item p {
+    word-break: break-all;
+}
+
 .info-item i {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -1440,6 +1444,9 @@ footer {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+    .projects {
+        background: var(--background-secondary);
+    }
     .hero-content h1 {
         font-size: 3rem;
     }
@@ -1491,8 +1498,8 @@ footer {
         padding: 4rem 1rem;
     }
     .hero-content h1 {
-        font-size: 2.2rem;
-        word-break: keep-all;
+        font-size: 2rem;
+        word-break: break-word;
     }
     .hero-greeting {
         font-size: 1rem;
@@ -1542,7 +1549,25 @@ footer {
     .btn {
         width: 100%;
         justify-content: center;
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1.2rem;
+    }
+    .contact-info {
+        gap: 1rem;
+    }
+    .info-item {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .info-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .info-item h3 {
+        font-size: 1.1rem;
+    }
+    .contact-form input, .contact-form textarea {
+        padding: 0.8rem 1rem;
     }
     .hero-socials {
         gap: 0.8rem;
@@ -1558,14 +1583,38 @@ footer {
     .stat-item h4 {
         font-size: 1.5rem;
     }
+    .skill-category, .ai-skill-card, .project-info, .timeline-content, .info-item, .cert-info {
+        padding: 1.2rem 1rem;
+    }
+    .project-image, .certificate-image {
+        height: 180px;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.8rem;
+    }
+    .projects-grid, .certificates-grid {
+        gap: 1.5rem;
+    }
+    .footer-bottom {
+        padding: 2rem 0;
+    }
+    .footer-icons {
+        gap: 1rem;
+    }
+    .footer-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
 
 .scroll-to-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
     background: var(--primary-gradient);
     color: white;
     border-radius: 50%;
@@ -1591,7 +1640,7 @@ footer {
 
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -1618,7 +1667,8 @@ footer {
 .certificate-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #000;
     transition: var(--transition);
 }
 
