@@ -825,37 +825,44 @@ section h2 {
 }
 
 .project-card {
-    background: var(--card-color);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: var(--transition);
-    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 92, 246, 0.1);
+    border-color: rgba(139, 92, 246, 0.3);
 }
 
 .project-image {
     position: relative;
     overflow: hidden;
-    height: 220px;
-    background-color: #ffffff;
+    height: 240px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 244, 255, 1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: #ffffff;
-    transition: var(--transition);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(2deg);
 }
 
 .project-overlay {
@@ -915,18 +922,89 @@ section h2 {
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1.2rem 0;
+    gap: 0.6rem;
+    margin: 1.5rem 0;
 }
 
 .tech-stack span {
-    background: rgba(102, 126, 234, 0.1);
-    color: #667eea;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid rgba(102, 126, 234, 0.2);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* Violet Theme Tech Stack */
+.tech-stack-violet span {
+    background: rgba(139, 92, 246, 0.1);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.project-card:hover .tech-stack-violet span {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.4);
+    color: #c4b5fd;
+}
+
+/* Green Theme Tech Stack (Agriculture/Environment) */
+.tech-stack-green span {
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.project-card:hover .tech-stack-green span {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.4);
+    color: #6ee7b7;
+}
+
+/* Blue Theme Tech Stack (Tools/Utilities) */
+.tech-stack-blue span {
+    background: rgba(14, 165, 233, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.project-card:hover .tech-stack-blue span {
+    background: rgba(14, 165, 233, 0.2);
+    border-color: rgba(14, 165, 233, 0.4);
+    color: #7dd3fc;
+}
+
+/* Orange Theme Tech Stack (E-Commerce/Business) */
+.tech-stack-orange span {
+    background: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.project-card:hover .tech-stack-orange span {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.4);
+    color: #fcd34d;
+}
+
+.btn-demo {
+    background: var(--primary-gradient);
+    color: var(--text-color) !important;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-demo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+    color: #fff !important;
 }
 
 .project-links {
