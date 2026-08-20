@@ -6,6 +6,24 @@ Welcome to the repository of my personal portfolio website! This site showcases 
 
 ---
 
+## 📁 Project Structure
+
+Here is the organized directory layout of this repository:
+
+```text
+├── assets/
+│   ├── certificates/   # Academic and training completion certificate images
+│   ├── docs/           # CV / Resume PDF document
+│   └── images/         # Project mockup screenshots, logos, and website graphics
+├── index.html          # Main landing page for the portfolio
+├── certificates.html   # Dedicated grid showcase for certifications
+├── style.css           # Custom stylesheets containing responsive grids and custom themes
+├── script.js           # Form validation and EmailJS service integration
+└── README.md           # Project documentation and guide
+```
+
+---
+
 ## 🙋‍♂️ About Me
 I'm a **Computer Engineering student at SPPU Pune (2023–2027)** passionate about building scalable web applications, AI-powered solutions, and Android applications. I specialize in Full Stack Development using Java, React, Node.js, and modern web technologies. I continuously explore new technologies, GenAI tools, and modern software development practices.
 
